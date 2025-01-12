@@ -3,7 +3,6 @@ import uuid
 
 # Create your models here.
 class TypeOfProducts(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
 
@@ -11,7 +10,6 @@ class TypeOfProducts(models.Model):
         return self.name
 
 class Product(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=60)
     price = models.FloatField(blank=True, null=True)
     description = models.TextField(blank=True, null=True)
